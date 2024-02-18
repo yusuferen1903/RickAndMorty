@@ -9,10 +9,18 @@ import { Router } from '@angular/router';
 
 export class SidebarComponent {
   constructor(private router: Router) {}
-  selectedTab: string = 'mainpage'; // Varsayılan olarak Ana Sayfa seçili
-
+  selectedTab: string = ''; // Varsayılan olarak Ana Sayfa seçili
+  currentUrl!: string;
   @Output() tabSelected = new EventEmitter<string>();
-
+  ngOnInit(): void {
+    this.currentUrl = this.router.url;
+    if (this.currentUrl.startsWith('/')) {
+      this.currentUrl = this.currentUrl.substring(1);
+    }
+    this.selectedTab = this.currentUrl ? this.currentUrl : 'mainpage'
+    console.log(this.currentUrl);
+    
+  }
   selectTab(tab: string) {
     this.selectedTab = tab;
     this.tabSelected.emit(tab);

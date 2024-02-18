@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CharacterComponent } from './character/character.component';
+import { SelectedCharacterComponent } from './selected-character/selected-character.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MainLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    CharacterComponent,
+    SelectedCharacterComponent
   ],
   imports: [
     BrowserModule,

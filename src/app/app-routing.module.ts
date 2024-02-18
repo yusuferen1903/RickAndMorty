@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { CharacterComponent } from './character/character.component';
+import { SelectedCharacterComponent } from './selected-character/selected-character.component';
 const routes: Routes = [
     //MainLayout Header ve Footerın Bulunduğu Ana Component içine ise children componentler gelerek sayfayı oluşturuyor.
     {
@@ -20,6 +21,10 @@ const routes: Routes = [
         {
           path: 'character',
           component: CharacterComponent
+        },
+        {
+          path: 'character/:id',
+          component: SelectedCharacterComponent
         }
   
       ]
