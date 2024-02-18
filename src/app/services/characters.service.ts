@@ -24,4 +24,9 @@ export class CharactersService {
     }
     return this.http.get<any>(url);
   }
+
+  getCharacterWithId(id:any): Observable<any> {
+    let url = `${this.apiUrl}/${id}`;
+    return this.http.get<any>(url);
+  }
 }

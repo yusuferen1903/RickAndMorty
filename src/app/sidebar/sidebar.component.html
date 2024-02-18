@@ -1,6 +1,6 @@
 <div class="tab" [ngClass]="{ 'active': selectedTab === 'mainpage' }" (click)="selectTab('mainpage')">
     <div class="tab-text"><i class="fa fa-home" aria-hidden="true"></i> <span>Ana Sayfa</span> </div>
   </div>
-  <div class="tab" [ngClass]="{ 'active': selectedTab === 'character' }" (click)="selectTab('character')">
+  <div class="tab" [ngClass]="{ 'active': selectedTab.includes('character') }" (click)="selectTab('character')">
     <div class="tab-text"><i class="fa fa-users" aria-hidden="true"></i> <span>Karakterler </span> </div>
   </div>

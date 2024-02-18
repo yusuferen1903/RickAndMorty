@@ -55,6 +55,7 @@ button.mat-paginator-navigation-next[disabled] {
     color: #fff;
     padding: 12px 16px;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   .icon-left {
@@ -103,4 +104,16 @@ button.mat-paginator-navigation-next[disabled] {
   
   .form-group label {
     margin-right: 5px;
+  }
+
+  .noResponse {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    color: red;
+    font-weight: bold;
+  }
+
+  .d-none {
+    display: none;
   }

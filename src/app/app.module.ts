@@ -14,26 +14,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { registerLocaleData } from '@angular/common';
-import localeTr from '@angular/common/locales/tr';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
-registerLocaleData(localeTr);
 export class MyPaginatorIntl extends MatPaginatorIntl {
-  override itemsPerPageLabel = 'Sayfa başına öğe';
-  override nextPageLabel     = 'Sonraki sayfa';
-  override previousPageLabel = 'Önceki sayfa';
-  override lastPageLabel = 'Son sayfa';
-  override firstPageLabel = 'İlk sayfa';
-
-  override getRangeLabel = (page: number, pageSize: number, length: number): string => {
-    if (length === 0 || pageSize === 0) {
-      return `0 / ${length}`;
-    }
-    length = Math.max(length, 0);
-    const startIndex = page * pageSize;
-    const endIndex = startIndex < length ? Math.min(startIndex + pageSize, length) : startIndex + pageSize;
-    return `${startIndex + 1} - ${endIndex} / ${length}`;
-  };
 }
 @NgModule({
   declarations: [
@@ -55,10 +38,7 @@ export class MyPaginatorIntl extends MatPaginatorIntl {
     MatPaginatorModule,
     MatIconModule
   ],
-  providers: [
-    { provide: LOCALE_ID, useValue: 'tr-TR' },
-    { provide: MatPaginatorIntl, useClass: MyPaginatorIntl }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

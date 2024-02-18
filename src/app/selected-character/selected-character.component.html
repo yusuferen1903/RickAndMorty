@@ -1,1 +1,14 @@
-<p>selected-character works!</p>
+<div class="main-div">
+    <mat-card class="custom-card">
+        <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+        <mat-card-content>
+          <h2 mat-card-title>{{ character.name }}</h2>
+          <p mat-card-subtitle>Status: {{ character.status }}</p>
+          <p mat-card-subtitle>Species: {{ character.species }}</p>
+          <p mat-card-subtitle>Gender: {{ character.gender }}</p>
+          <p mat-card-subtitle>Created: {{ character.created | date  }}</p>
+          <p mat-card-subtitle>Number Of Episodes: {{ character.episode.length }}</p>
+          <p mat-card-subtitle>Location: {{ character.location.name }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

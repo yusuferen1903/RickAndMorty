@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CharactersService } from '../services/characters.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-selected-character',
@@ -6,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrl: './selected-character.component.scss'
 })
 export class SelectedCharacterComponent {
+  character : any
+  id
+  constructor(
+    private characterService: CharactersService,
+    private route: ActivatedRoute,
+    ) {
+      this.id = this.route.snapshot.paramMap.get('id');
+     }
 
+    ngOnInit(): void {
+      console.log(this.id);
+      
+      this.getCharacterWithId(this.id);
+    }
+
+    getCharacterWithId(id:any): void {
+
+      this.characterService.getCharacterWithId(id)
+        .subscribe(response => {
+          this.character = response
+          console.log(response);
+        },
+        (err)=>{
+          this.character = []
+          
+        })
+    }
 }
