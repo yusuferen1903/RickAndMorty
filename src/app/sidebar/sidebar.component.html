@@ -1,0 +1,6 @@
+<div class="tab" [ngClass]="{ 'active': selectedTab === 'Ana Sayfa' }" (click)="selectTab('Ana Sayfa')">
+    <div class="tab-text"><i class="fa fa-home" aria-hidden="true"></i> <span>Ana Sayfa</span> </div>
+  </div>
+  <div class="tab" [ngClass]="{ 'active': selectedTab === 'Karakterler' }" (click)="selectTab('Karakterler')">
+    <div class="tab-text"><i class="fa fa-users" aria-hidden="true"></i> <span>Karakterler </span> </div>
+  </div>

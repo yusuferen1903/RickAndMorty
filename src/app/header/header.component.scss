@@ -5,8 +5,12 @@ header {
     padding: 20px;
     background-color: #fff;
     color: #000;
-    margin-right: 5%;
-    margin-left: 5%;
+  }
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
   }
   nav {
     display: flex;
@@ -17,8 +21,12 @@ header {
   }
   nav a {
     margin-right: 20px;
-    color: #000;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
     text-decoration: none;
+    letter-spacing: 1px
   }
   
   .social-media a {

@@ -1,0 +1,35 @@
+.tab {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    span {
+        margin-left: 10px;
+    }
+  }
+  
+  .tab:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .active {
+    color: #000;
+    font-weight: bold;
+    .tab-text {
+        margin-left: 10px;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        text-decoration: none;
+        letter-spacing: 0.5px
+    }
+  }
+  
+  .active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #08b1c9;
+  }
+
