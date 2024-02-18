@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="pagination.itemsPerPageLabel" datatype="html">
+        <source>Items per page</source>
+        <target>Sayfa başına öğe</target>
+      </trans-unit>
+      <trans-unit id="pagination.nextPageLabel" datatype="html">
+        <source>Next page</source>
+        <target>Sonraki sayfa</target>
+      </trans-unit>
+      <trans-unit id="pagination.previousPageLabel" datatype="html">
+        <source>Previous page</source>
+        <target>Önceki sayfa</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

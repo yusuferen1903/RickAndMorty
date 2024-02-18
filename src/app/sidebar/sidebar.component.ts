@@ -18,8 +18,6 @@ export class SidebarComponent {
       this.currentUrl = this.currentUrl.substring(1);
     }
     this.selectedTab = this.currentUrl ? this.currentUrl : 'mainpage'
-    console.log(this.currentUrl);
-    
   }
   selectTab(tab: string) {
     this.selectedTab = tab;
