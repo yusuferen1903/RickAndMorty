@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 
 export class SidebarComponent {
   constructor(private router: Router) {}
-  selectedTab: string = 'Ana Sayfa'; // Varsayılan olarak Ana Sayfa seçili
+  selectedTab: string = 'mainpage'; // Varsayılan olarak Ana Sayfa seçili
 
   @Output() tabSelected = new EventEmitter<string>();
 
