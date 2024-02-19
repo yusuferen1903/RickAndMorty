@@ -21,3 +21,4 @@
 
 * Proje ilk ayağa kaldırıldığında anasayfa açılır. Karakter sayfasında tüm karakterler rickandmortyapi servisinden çekilir.
 * Search butonu koyulmamıştır onun yerine seçim yapıldığı anda filtreleme yapılması sağlanmıştır.
+* Filtreleri kaldırmak için filtre butonlarını default hale getirmeniz yeterli. (Gender , Type , Status , Name)
