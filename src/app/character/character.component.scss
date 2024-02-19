@@ -14,10 +14,6 @@
   display: flex;
   justify-content: center;
 }
-// mat-grid-tile {
-//     height: calc(430px) !important;
-//     padding-top: 0px !important;
-// }
 .mat-paginator-range-label,
 .mat-paginator-page-size-label {
   font-size: 14px;
@@ -41,10 +37,6 @@ button.mat-paginator-navigation-previous[disabled],
 button.mat-paginator-navigation-next[disabled] {
   color: #ccc; /* Devre dışı bırakılmış önceki ve sonraki buton renkleri */
 }
-
-// .custom-card {
-//     width: 60%;
-//   }
   
   .custom-button {
     width: 100%;
@@ -62,12 +54,6 @@ button.mat-paginator-navigation-next[disabled] {
     margin-right: 8px;
   }
   
-//   .mat-grid-tile {
-//     width: calc(25% - 16px);
-//     padding-top: calc(13% - 12px);
-//     margin-top: calc(30% + 5px);
-//   }
-
 .filter-panel {
     display: flex;
     flex-wrap: wrap;
@@ -75,12 +61,14 @@ button.mat-paginator-navigation-next[disabled] {
     border: 1px solid #ddd;
     padding: 10px;
     background-color: #f7f7f7;
+    margin: 10px;
     span {
         display: flex;
         align-items: center;
         font-size: 16px;
         font-weight: bold;
         letter-spacing: 1px;
+        margin-right: 20px;
     }
     input {
         padding: 10px;
@@ -117,3 +105,49 @@ button.mat-paginator-navigation-next[disabled] {
   .d-none {
     display: none;
   }
+
+  @media screen and (max-width: 1530px) {
+    .filter-panel {
+      input {
+        width: 150px;
+      }
+      select {
+        width: 100px;
+      }
+    }
+  }
+
+@media screen and (max-width: 950px) {
+  .filter-panel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 328px;
+    }
+    select {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    ::ng-deep .sidebar-container {
+      display: none;
+  }
+    .filter-panel {
+      input {
+        width: 128px;
+      }
+      select {
+        width: 150px;
+      }
+    }
+  }
+
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+}

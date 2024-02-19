@@ -8,3 +8,29 @@
     align-items: center;
     margin: 60px;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+  .custom-card {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .custom-card {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .custom-card {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  ::ng-deep .sidebar-container {
+    display: none;
+}
+}

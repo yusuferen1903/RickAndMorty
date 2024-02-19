@@ -18,8 +18,6 @@ export class SelectedCharacterComponent {
      }
 
     ngOnInit(): void {
-      console.log(this.id);
-      
       this.getCharacterWithId(this.id);
     }
 
@@ -28,7 +26,6 @@ export class SelectedCharacterComponent {
       this.characterService.getCharacterWithId(id)
         .subscribe(response => {
           this.character = response
-          console.log(response);
         },
         (err)=>{
           this.character = []
