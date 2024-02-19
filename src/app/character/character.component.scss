@@ -1,0 +1,153 @@
+.characters-container {
+  min-height: calc(100vh - 300px);
+}
+
+.paginator {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.mat-paginator {
+  display: flex;
+  justify-content: center;
+}
+.mat-paginator-range-label,
+.mat-paginator-page-size-label {
+  font-size: 14px;
+}
+
+.mat-select-arrow {
+  color: #000;
+}
+
+button.mat-paginator-navigation-previous,
+button.mat-paginator-navigation-next {
+  color: #000; /* Önceki ve sonraki buton renkleri */
+}
+
+button.mat-paginator-navigation-previous:hover,
+button.mat-paginator-navigation-next:hover {
+  background-color: transparent; /* Önceki ve sonraki buton hover arka plan rengi */
+}
+
+button.mat-paginator-navigation-previous[disabled],
+button.mat-paginator-navigation-next[disabled] {
+  color: #ccc; /* Devre dışı bırakılmış önceki ve sonraki buton renkleri */
+}
+  
+  .custom-button {
+    width: 100%;
+    background-color: #08b1c9;
+    border: none;
+    display: flex; 
+    justify-content: center ;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .icon-left {
+    margin-right: 8px;
+  }
+  
+.filter-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f7f7f7;
+    margin: 10px;
+    span {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-right: 20px;
+    }
+    input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 300px;
+    }
+    select {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: #777070;
+        font-weight: bold;
+        width: 250px;
+    }
+  }
+  
+  .form-group {
+    margin-right: 20px;
+  }
+  
+  .form-group label {
+    margin-right: 5px;
+  }
+
+  .noResponse {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    color: red;
+    font-weight: bold;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  @media screen and (max-width: 1530px) {
+    .filter-panel {
+      input {
+        width: 150px;
+      }
+      select {
+        width: 100px;
+      }
+    }
+  }
+
+@media screen and (max-width: 950px) {
+  .filter-panel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 328px;
+    }
+    select {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    ::ng-deep .sidebar-container {
+      display: none;
+  }
+    .filter-panel {
+      input {
+        width: 128px;
+      }
+      select {
+        width: 150px;
+      }
+    }
+  }
+
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+}

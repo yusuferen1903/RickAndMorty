@@ -1,27 +1,24 @@
-# Rickandmorty
+### Gerekli Kurulumlar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+* Angular 17+
+* Node
 
-## Development server
+## Nasıl Çalıştırılır?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> #### Projenin çalıştırabilmesi için terminalde aşağıdaki komutların çalıştırılması gerekmektedir:
+* `npm install`
+> #### Ardından uygulamanın çalışır hale gelebilmesi için aşağıdaki kod parçası terminalde çalıştırılmalıdır:
+* `ng serve`
+> #### Bu komutların ardından uygulama *[localhost:4200](http://localhost:4200/)* portunda çalışır hale gelmektedir.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Uygulama Ne Yapar?
+* *[localhost:4200/](http://localhost:4200/)* adresinde anasayfamız bulunmaktadır burada karakterlerin bulunduğu resim ve karakterle gitmeniz için buton bulunmaktadır aynı zamanda sol tarafta bulunan sidebardan da karakterlere gidilebilir.
+* *[localhost:4200/character](http://localhost:4200/character)* adresinden eklenmiş olan tüm karakterleri listeleyebilirsiniz. Karakterler default id olarak sıralanmış halde gelir. Karakter kart kart olacak şekilde listelenmiştir. Bu kartlarda karakterlerin bilgileri bulunmaktadır. Detay butonuna basarkta karakter detayına gidebilirsiniz. Karakterli cinsiyetine(kadın , erkek, cinsiyetsiz, bilinmiyor) statusüne (ölü , yaşıyor , bilinmiyor) ve tipine (insan , uzaylı , hayvan , vb...) göre filtreleyebilirsiniz. Bu filtreler birbirileriyle aynı anda çalışabilir. Aynı zamanda karakterli ismini yazarakta arayabilirsiniz. Karakterler sayfada 20 şerli olarak listelenir . Karakterlerin sayfaları aralarında gezinebilirsiniz. 
+* *[localhost:4200/character/id](http://localhost:4200/character/id)* adresinden karakterlerin detaylarına ulaşabilirsiniz. Id kısmına yazdığınız karakterin detayı listelenir. Her karakterin detayına [localhost:4200/character] adresinde bulunan detay butonundan ulaşabilirsiniz.
 
-## Build
+## Uygulama İle İlgili Notlar
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Proje ilk ayağa kaldırıldığında anasayfa açılır. Karakter sayfasında tüm karakterler rickandmortyapi servisinden çekilir.
+* Search butonu koyulmamıştır onun yerine seçim yapıldığı anda filtreleme yapılması sağlanmıştır.
+* Filtreleri kaldırmak için filtre butonlarını default hale getirmeniz yeterli. (Gender , Type , Status , Name)

@@ -1,0 +1,65 @@
+<div class="characters-container">
+    <div class="filter-panel">
+        <span>Filter Characters</span>
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Name" (input)="onNameChange($event.target)">
+        </div>
+        <div class="form-group">
+          <select id="type" name="type" (change)="onTypeChange($event.target)">
+            <option value="">Type</option>
+            <option value="Human">Human</option>
+            <option value="Alien">Alien</option>
+            <option value="animal">Animal</option>
+            <option value="Mythological">Mythological</option>Disease
+            <option value="robot">Robot</option>Cronenberg
+            <option value="Disease">Disease</option>
+            <option value="Cronenberg">Cronenberg</option>
+            <option value="unknown">Unknown</option>
+            <!-- Diğer seçenekler buraya eklenebilir -->
+          </select>
+        </div>
+        <div class="form-group">
+          <select id="status" name="status" (change)="onStatusChange($event.target)">
+            <option value="">Status</option>
+            <option value="Alive">Alive</option>
+            <option value="Dead">Dead</option>
+            <option value="Unknown">Unknown</option>
+            <!-- Diğer seçenekler buraya eklenebilir -->
+          </select>
+        </div>
+        <div class="form-group">
+          <select id="gender" name="gender" (change)="onGenderChange($event.target)">
+            <option value="">Gender</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Genderless">Genderless</option>
+            <option value="unknown">Unknown</option>
+            <!-- Diğer seçenekler buraya eklenebilir -->
+          </select>
+        </div>
+      </div>
+    <mat-grid-list *ngIf="characters.length > 0" [cols]="colsNumber" rowHeight="480px" gutterSize="16px">
+      <mat-grid-tile *ngFor="let character of characters">
+        <mat-card class="custom-card">
+          <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+          <mat-card-content>
+            <h2 mat-card-title>{{ character.name }}</h2>
+            <p mat-card-subtitle>Status: {{ character.status }}</p>
+            <p mat-card-subtitle>Species: {{ character.species }}</p>
+            <p mat-card-subtitle>Gender: {{ character.gender }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button  class="custom-button" (click)="goToDetail(character.id)"><i class="fa fa-long-arrow-right icon-left" aria-hidden="true"></i>Detaylar</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div *ngIf="characters.length <=0" class="noResponse">
+      HİÇ BİR SONUÇ BULUNAMADI !
+    </div>
+</div>
+
+  
+<mat-paginator  [ngClass]="{ 'd-none': characters.length <= 0 }" itemsPerPageLabel="Sayfa başına öğe" nextPageLabel="İleri" previousPageLabel="Geri"  [length]="totalCharacters" [pageSize]="pageSize" (page)="onPageChange($event)" class="paginator"></mat-paginator>
+
+  
